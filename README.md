@@ -13,7 +13,7 @@ This project is a web-based application that allows users to generate customizab
 
 ## Access
 
-You can access the tool [here](https://your-username.github.io/your-repository/).
+You can access the tool [here](https://b1oko.github.io/PaperGrid/).
 
 ## Usage
 
