@@ -1,0 +1,158 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.left, .right {
+    width: 45%;
+}
+
+.configItem {
+    display: block;
+    width: 100%;
+    align-content: flex-end;
+}
+
+.left h3,
+.right h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.left label,
+.right label {
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.left select {
+    display: inline-block;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 4px 8px;
+}
+
+.right input[type="color"] {
+    border: 1px solid #007BFF;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.colorSelector {
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.left input[type="range"],
+.right input[type="range"] {
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.left span,
+.right span {
+    font-size: 14px;
+    padding: 0px 1px;
+    /* display: inline-block; */
+    /* width: 80%; */
+    /* margin-bottom: 20px; */
+}
+
+
+
+
+/* DOWNLOAD BUTTONS */
+
+.buttons-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.buttons-div button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* ORIENTATION SELECTOR */
+
+/* Hide original radio input */
+input[type="radio"] {
+    display: none;
+}
+
+.radio-buttons label {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    /* border: none; */
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.radio-buttons input[type="radio"]:checked + label {
+    background-color: #007BFF;
+    color: white;
+}
+
+.radio-buttons input[type="radio"]:not(:checked) + label {
+    background-color: white;
+    color: black;
+}
+
+.radio-buttons label:hover {
+    background-color: #0056b3;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* GRID */
+
+#gridCanvas {
+    border: 1px solid black;
+    margin: 20px;
+}

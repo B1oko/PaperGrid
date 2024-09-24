@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Cuadrícula Personalizable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="left">
+            <h3>Page</h3>
+            <div class="configItem">
+                <label for="pageSize">Size</label>
+                <select id="pageSize">
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="A3">A3</option>
+                    <option value="A4" selected="selected">A4</option>
+                    <option value="A5">A5</option>
+                </select>
+            </div>
+
+            <div class="radio-buttons">
+                <input type="radio" id="portrait" name="orientation" value="portrait" checked>
+                <label for="portrait">Portrait</label>
+        
+                <input type="radio" id="landscape" name="orientation" value="landscape">
+                <label for="landscape">Landscape</label>
+            </div>
+
+            <h3>Grid</h3>
+            <div class="configItem">
+                <label for="gridType">Type</label>
+                <select id="gridType">
+                    <option value="squares" selected="selected">Squares</option>
+                    <option value="dots">Dots</option>
+                    <!-- <option value="isometric" selected="selected">Isometric</option> -->
+                    <option value="lines">Lines</option>
+                </select>
+            </div>
+            
+            <div class="configItem">
+                <label for="gridSize">Size</label> <span class="value" id="gridSizeValueSpan">1 mm</span>
+                <input type="range" id="gridSize" min="1" max="20" value="5">
+            </div>
+            
+            <div class="configItem">
+                <label for="gridMargin">Margin</label> <span class="value" id="gridMarginValueSpan">1 mm</span>
+                <input type="range" id="gridMargin" min="0" max="20" value="5">
+            </div>
+        </div>
+
+        <div class="right">
+            <h3>Background</h3>
+            <div class="configItem">
+                <label for="backgroundColor">Color</label>
+                <input type="color" id="backgroundColor" value="#ffffff">
+                <div>
+                    <div class="colorSelector" style="background-color: #FFFFFF;" onclick="setBackgroundColor('#FFFFFF')"></div>
+                    <div class="colorSelector" style="background-color: #fcfcf0;" onclick="setBackgroundColor('#fcfcf0')"></div>
+                    <div class="colorSelector" style="background-color: #f0f0fc;" onclick="setBackgroundColor('#f0f0fc')"></div>
+                    <div class="colorSelector" style="background-color: #808080;" onclick="setBackgroundColor('#808080')"></div>
+                    <div class="colorSelector" style="background-color: #202020;" onclick="setBackgroundColor('#202020')"></div>
+                </div>
+            </div>
+
+            <h3>Lines</h3>
+            <div class="configItem">
+                <label for="lineColor">Color</label>
+                <input type="color" id="lineColor" value="#000000">
+                <div>
+                    <div class="colorSelector" style="background-color: #FFFFFF;" onclick="setLineColor('#FFFFFF')"></div>
+                    <div class="colorSelector" style="background-color: #D0D0D0;" onclick="setLineColor('#D0D0D0')"></div>
+                    <div class="colorSelector" style="background-color: #B0B0B0;" onclick="setLineColor('#B0B0B0')"></div>
+                    <div class="colorSelector" style="background-color: #808080;" onclick="setLineColor('#808080')"></div>
+                    <div class="colorSelector" style="background-color: #000000;" onclick="setLineColor('#000000')"></div>
+                </div>
+            </div>
+
+            <div class="configItem">
+                <label for="lineThickness">Thickness</label>  <span class="value" id="lineThicknessValueSpan">0.5 px</span>
+                <input type="range" id="lineThickness" min="0.5" max="5" step="0.1" value="1">
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons-div">
+        <button id="PDFDownloadBtn">Descargar PDF</button>
+        <button id="PNGDownloadBtn">Descargar PNG</button>
+    </div>
+
+    <canvas id="gridCanvas"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
